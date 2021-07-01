@@ -1,5 +1,5 @@
 {
-  "name": "next-ts",
+  "name": "next-e-commere",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,16 +10,20 @@
     "format": "prettier --write"
   },
   "dependencies": {
+    "@moai/core": "1.0.0",
     "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "17.0.13",
     "@types/react-dom": "17.0.8",
     "@typescript-eslint/eslint-plugin": "4.28.1",
     "@typescript-eslint/parser": "4.28.1",
+    "autoprefixer": "10.2.6",
     "eslint": "7.29.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-prettier": "3.4.0",
@@ -27,13 +31,15 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "husky": "4.3.8",
     "lint-staged": "11.0.0",
+    "postcss": "8.3.5",
     "prettier": "2.3.2",
+    "tailwindcss": "2.2.4",
     "typescript": "4.3.5"
   },
   "lint-staged": {
-    "**/*.{ts, tsx}": [
-      "yarn format",
-      "yarn lint"
+    "*.{js,ts,tsx}": [
+      "yarn lint",
+      "yarn format"
     ]
   },
   "husky": {
