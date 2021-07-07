@@ -6,7 +6,7 @@ import { HiMenu, HiOutlineX } from 'react-icons/hi';
 
 interface Props {
   children: ReactChild;
-  backBtn: boolean;
+  backBtn?: boolean;
   backBtnLabel: string;
   onBack?: () => void;
 }
@@ -26,10 +26,10 @@ const Layout = ({
           <Sidebar />
         </div>
         <main
-          className={`relative w-full bg-white shadow md:rounded-l-3xl rounded-none md:w-4/5`}>
+          className={`relative w-full md:pl-12 bg-gray-100 shadow md:rounded-l-3xl rounded-none md:w-4/5`}>
           <div
-            className={`flex relative p-2 md:p-6 ${
-              backBtn ? 'justify-between' : 'justify-end'
+            className={`flex relative  ${
+              backBtn ? 'justify-between p-2 md:p-6' : 'justify-end'
             }`}>
             {backBtn && (
               <div>

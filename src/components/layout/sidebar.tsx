@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { MENU, ITEM_MENU } from 'constants/menu';
+import { MENU, ITEM_MENU, MENU_BOTTOM } from 'constants/menu';
 import { useMemo } from 'react';
 
 const renderMenuItem = (item: ITEM_MENU, index: number) => {
@@ -29,7 +29,7 @@ const renderMenuItem = (item: ITEM_MENU, index: number) => {
 
 const Sidebar = (): JSX.Element => {
   return (
-    <div className="px-6 py-6">
+    <div className="flex flex-col h-full px-6 py-6">
       <div className="mb-6">
         <img
           className="hidden w-full h-auto mb-4 rounded-hafl md:block"
@@ -46,8 +46,9 @@ const Sidebar = (): JSX.Element => {
           {'<'}Company name{'>'}
         </p>
       </div>
-      <div>
+      <div className="flex flex-col justify-between h-full">
         <ul className="space-y-1">{MENU.map(renderMenuItem)}</ul>
+        <ul className="space-y-1">{MENU_BOTTOM.map(renderMenuItem)}</ul>
       </div>
     </div>
   );
